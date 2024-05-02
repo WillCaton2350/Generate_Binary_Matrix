@@ -1,4 +1,7 @@
 from math import trunc
+# scaling down
+# how much something is compressed from 4 individual units to 1
+# not always value based but unit based from 4 units to 1
 
 class generate_matrix:
     # get the binary representation and then read from the last remainder up
@@ -18,17 +21,24 @@ class generate_matrix:
         cell_11 = 2.75 % 2
         cell_12 = 1.375 % 2
 
-        cell_13 = 8 % 2
+        cell_13 = 8 % 2 
         cell_14 = 4 % 2
         cell_15 = 2 % 2
         cell_16 = 1 % 2
 
         # reverse the order of cells so the proper binary number is printed to the terminal
         # This is how its written out when read from bottom up
-        print(f"{trunc(cell_4)} {trunc(cell_3)} {trunc(cell_2)} {trunc(cell_1)}")
-        print(f"{trunc(cell_8)} {trunc(cell_7)} {trunc(cell_6)} {trunc(cell_5)}")
-        print(f"{trunc(cell_12)} {trunc(cell_11)} {trunc(cell_10)} {trunc(cell_9)}")
-        print(f"{trunc(cell_16)} {trunc(cell_15)} {trunc(cell_14)} {trunc(cell_13)}")
+
+        matrix = [
+            [trunc(cell_4),trunc(cell_3),trunc(cell_2),trunc(cell_1)],
+            [trunc(cell_8),trunc(cell_7),trunc(cell_6),trunc(cell_5)],
+            [trunc(cell_12),trunc(cell_11),trunc(cell_10),trunc(cell_9)],
+            [trunc(cell_16),trunc(cell_15),trunc(cell_14),trunc(cell_13)],
+        ]
+
+        print(matrix)
+        # perform spiral order traversal on this binary matrix
+        # we now have a 16 digit binary number
 
 if __name__ == "__main__":
     instance = generate_matrix()
