@@ -17,6 +17,7 @@ class GenerateMatrix:
                 val = bin(i)[2:-3] 
                 data = [int(i) for i in val]
                 cls.result.append(data)
+            return cls.result
 
 
 if __name__ == "__main__":
