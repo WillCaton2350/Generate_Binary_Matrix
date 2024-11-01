@@ -1,4 +1,4 @@
-
+'''Refactored'''
 class GenerateMatrix:
     __instance = None
     nums = [114,112,109,118]
