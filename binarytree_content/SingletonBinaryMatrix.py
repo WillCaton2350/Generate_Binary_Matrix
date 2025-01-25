@@ -20,5 +20,9 @@ class GenerateMatrix:
             return cls.result
 
 
+# I want this to be dynamic, not static. I need to find a way to make the static nums array dynamic, allowing it to function like mutable parameters.
+# As well as the length of each array in the matrix. They should be defined in the parameters. The Indices of each array in the matrix.
+
+
 if __name__ == "__main__":
     GenerateMatrix()
